@@ -1,0 +1,9 @@
+infra:
+  rdb:
+    writer_url: ${DATABASE_WRITER_URL:"mysql+aiomysql://user:password@localhost:13306/local_dev?charset=utf8mb4"}
+    reader_url: ${DATABASE_READER_URL:"mysql+aiomysql://user:password@localhost:13306/local_dev?charset=utf8mb4"}
+    echo: ${DATABASE_ECHO:true}
+systems:
+  notification_push_api:
+    base_url: ${SYSTEMS_NOTIFICATION_PUSH_API_BASE_URL:"http://localhost:8081"}
+    secret_key: ${SYSTEMS_NOTIFICATION_PUSH_API_SECRET_KEY:"push_api_secret_key"}
